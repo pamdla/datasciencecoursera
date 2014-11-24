@@ -5,34 +5,33 @@
 
 **use xlsx**
 
-<pre><code>
+<code>
 library('xlsx')
 data<-read.xlsx('path/to/xlxsfile',1,sheetName = “Sheet1”,header=TRUE)
-</code></pre>
+</code>
 
 **or, use xlsx2**
 
-<pre><code>
+<code>
 library('xlsx')
 read.xlsx2("path/to/excelfile", sheetName = “Sheet1”)
-</code></pre>
+</code>
 
 **or, use XLConnect**
 
-<pre><code>
-install.packages("XLConnect")
+<code>install.packages("XLConnect")
 library("XLConnect")
 excel.file <- file.path("path/to/excelfile")
 elements <- readWorksheetFromFile(excel.file, sheet=1)
 #or
 elements <- readWorksheetFromFile(excel.file, sheet="Sheet1")
-</code></pre>
+</code>
 
 **or use gdata**
-<pre><code>
+<code>
 require(gdata)
 myDf <- read.xls ("path/to/excelfile"), sheet = 1, header = TRUE)
-</code></pre>
+</code>
 
 
 * Note: for some case, you may encounter failure while loading xlsx.
@@ -51,32 +50,30 @@ myDf <- read.xls ("path/to/excelfile"), sheet = 1, header = TRUE)
 
 	**How to use**
 
-	<pre>
+	
 	<code>
 	library('rcom')
 	readWorksheetFromFile(excel.file, sheet=1)
-	</code></pre>
+	</code>
 
 
 ##csv
-
-<pre>
-<code>data<-read.csv('path/to/csvfile')</code></pre>
+<code>data<-read.csv('path/to/csvfile')<</code>
 
 
 
 ##dat
 for pure text format dat file,
-<pre><code>
+<code>
 data<-read.table('path/to/datfile')
-</code></pre>
+</code>
 
 
 
 ##dta
 
-<pre><code>
+<code>
 install.packages("foreign")
 require(foreign)
 unionData <- read.dta('path/to/dtafile')
-</code></pre>
+</code>
