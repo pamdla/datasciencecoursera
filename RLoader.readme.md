@@ -23,6 +23,9 @@ read.xlsx2("path/to/excelfile", sheetName = “Sheet1”)
 install.packages("XLConnect")
 library("XLConnect")
 excel.file <- file.path("path/to/excelfile")
+elements <- readWorksheetFromFile(excel.file, sheet=1)
+#or
+elements <- readWorksheetFromFile(excel.file, sheet="Sheet1")
 </code>
 
 **or use gdata**
