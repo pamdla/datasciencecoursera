@@ -4,16 +4,27 @@
 ##xlsx
 
 **use xlsx**
+
 <code>
 library('xlsx')
 data<-read.xlsx('path/to/xlxsfile',1,sheetName = “Sheet1”,header=TRUE)
 </code>
 
-**or use xlsx2**
+**or, use xlsx2**
+
 <code>
 library('xlsx')
 read.xlsx2(“myfile.xlsx”, sheetName = “Sheet1”)
 </code>
+
+**or, use XLConnect**
+
+<code>
+install.packages("XLConnect")
+library("XLConnect")
+excel.file <- file.path("~/Elements.xlsx")
+</code>
+
 
 * Note: for some case, you may encounter failure while loading xlsx.
 
@@ -31,12 +42,14 @@ read.xlsx2(“myfile.xlsx”, sheetName = “Sheet1”)
 
 	**How to use**
 
-	<code>library('rcom')
+	<code>
+	library('rcom')
 	readWorksheetFromFile(excel.file, sheet=1)
 	</code>
 
 
 ##csv
+
 <code>data<-read.csv('path/to/csvfile')</code>
 
 
@@ -50,7 +63,9 @@ data<-read.table('path/to/datfile')
 
 
 ##dta
-<code>install.packages("foreign")
+
+<code>
+install.packages("foreign")
 require(foreign)
 unionData <- read.dta('path/to/dtafile')
 </code>
