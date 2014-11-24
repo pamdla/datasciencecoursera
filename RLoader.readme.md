@@ -3,13 +3,13 @@
 
 ##xlsx
 
-***use xlsx***
+**use xlsx**
 <code>
 library('xlsx')
 data<-read.xlsx('path/to/xlxsfile',1,sheetName = “Sheet1”,header=TRUE)
 </code>
 
-***or use xlsx2:***
+**or use xlsx2**
 <code>
 library('xlsx')
 read.xlsx2(“myfile.xlsx”, sheetName = “Sheet1”)
@@ -29,7 +29,7 @@ read.xlsx2(“myfile.xlsx”, sheetName = “Sheet1”)
 
 	and documentation [How to install](http://homepage.univie.ac.at/erich.neuwirth/php/rcomwiki/doku.php?id=wiki:how_to_install)
 
-	***How to use:***
+	**How to use**
 
 	<code>library('rcom')
 	readWorksheetFromFile(excel.file, sheet=1)
