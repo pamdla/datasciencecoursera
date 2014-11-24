@@ -5,33 +5,28 @@
 
 **use xlsx**
 
-<code>
-library('xlsx')
-data<-read.xlsx('path/to/xlxsfile',1,sheetName = “Sheet1”,header=TRUE)
-</code>
+	library('xlsx')
+	data<-read.xlsx('path/to/xlxsfile',1,sheetName = “Sheet1”,header=TRUE)
 
 **or, use xlsx2**
 
-<code>
-library('xlsx')
-read.xlsx2("path/to/excelfile", sheetName = “Sheet1”)
-</code>
+	library('xlsx')
+	read.xlsx2("path/to/excelfile", sheetName = “Sheet1”)
 
 **or, use XLConnect**
 
-<code>install.packages("XLConnect")
-library("XLConnect")
-excel.file <- file.path("path/to/excelfile")
-elements <- readWorksheetFromFile(excel.file, sheet=1)
-#or
-elements <- readWorksheetFromFile(excel.file, sheet="Sheet1")
-</code>
+	install.packages("XLConnect")
+	library("XLConnect")
+	excel.file <- file.path("path/to/excelfile")
+	elements <- readWorksheetFromFile(excel.file, sheet=1)
+	#or
+	elements <- readWorksheetFromFile(excel.file, sheet="Sheet1")
 
 **or use gdata**
-<code>
-require(gdata)
-myDf <- read.xls ("path/to/excelfile"), sheet = 1, header = TRUE)
-</code>
+
+	require(gdata)
+	myDf <- read.xls ("path/to/excelfile"), sheet = 1, header = TRUE)
+
 
 
 * Note: for some case, you may encounter failure while loading xlsx.
@@ -50,30 +45,23 @@ myDf <- read.xls ("path/to/excelfile"), sheet = 1, header = TRUE)
 
 	**How to use**
 
-	
-	<code>
-	library('rcom')
-	readWorksheetFromFile(excel.file, sheet=1)
-	</code>
+		library('rcom')
+		readWorksheetFromFile(excel.file, sheet=1)
 
 
 ##csv
-<code>data<-read.csv('path/to/csvfile')<</code>
+	data<-read.csv('path/to/csvfile')
 
 
 
 ##dat
-for pure text format dat file,
-<code>
-data<-read.table('path/to/datfile')
-</code>
+for pure text format dat file
 
+	data<-read.table('path/to/datfile')
 
 
 ##dta
 
-<code>
-install.packages("foreign")
-require(foreign)
-unionData <- read.dta('path/to/dtafile')
-</code>
+	install.packages("foreign")
+	require(foreign)
+	unionData <- read.dta('path/to/dtafile')
