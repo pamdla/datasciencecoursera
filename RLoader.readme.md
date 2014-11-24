@@ -5,24 +5,21 @@
 
 **use xlsx**
 
-<pre>
-<code>
+<pre><code>
 library('xlsx')
 data<-read.xlsx('path/to/xlxsfile',1,sheetName = “Sheet1”,header=TRUE)
 </code></pre>
 
 **or, use xlsx2**
 
-<pre>
-<code>
+<pre><code>
 library('xlsx')
 read.xlsx2("path/to/excelfile", sheetName = “Sheet1”)
 </code></pre>
 
 **or, use XLConnect**
 
-<pre>
-<code>
+<pre><code>
 install.packages("XLConnect")
 library("XLConnect")
 excel.file <- file.path("path/to/excelfile")
@@ -32,8 +29,7 @@ elements <- readWorksheetFromFile(excel.file, sheet="Sheet1")
 </code></pre>
 
 **or use gdata**
-<pre>
-<code>
+<pre><code>
 require(gdata)
 myDf <- read.xls ("path/to/excelfile"), sheet = 1, header = TRUE)
 </code></pre>
@@ -71,8 +67,7 @@ myDf <- read.xls ("path/to/excelfile"), sheet = 1, header = TRUE)
 
 ##dat
 for pure text format dat file,
-<pre>
-<code>
+<pre><code>
 data<-read.table('path/to/datfile')
 </code></pre>
 
@@ -80,8 +75,7 @@ data<-read.table('path/to/datfile')
 
 ##dta
 
-<pre>
-<code>
+<pre><code>
 install.packages("foreign")
 require(foreign)
 unionData <- read.dta('path/to/dtafile')
