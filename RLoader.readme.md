@@ -7,6 +7,7 @@
 
 <code>
 library('xlsx')
+
 data<-read.xlsx('path/to/xlxsfile',1,sheetName = “Sheet1”,header=TRUE)
 </code>
 
@@ -14,15 +15,26 @@ data<-read.xlsx('path/to/xlxsfile',1,sheetName = “Sheet1”,header=TRUE)
 
 <code>
 library('xlsx')
-read.xlsx2(“myfile.xlsx”, sheetName = “Sheet1”)
+
+read.xlsx2("path/to/excelfile", sheetName = “Sheet1”)
 </code>
 
 **or, use XLConnect**
 
 <code>
 install.packages("XLConnect")
+
 library("XLConnect")
-excel.file <- file.path("~/Elements.xlsx")
+
+excel.file <- file.path("path/to/excelfile")
+</code>
+
+**or use gdata**
+
+<code>
+require(gdata)
+
+myDf <- read.xls ("path/to/excelfile"), sheet = 1, header = TRUE)
 </code>
 
 
@@ -66,6 +78,8 @@ data<-read.table('path/to/datfile')
 
 <code>
 install.packages("foreign")
+
 require(foreign)
+
 unionData <- read.dta('path/to/dtafile')
 </code>
